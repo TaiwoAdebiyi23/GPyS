@@ -13,8 +13,20 @@ from GPyS_prediction import Prediction
 
 
 class GPyS_Script:
+"""
+A working script to directly obtain Principal Directions, Principal Variances, and Noise Variance from GPyS Package.
+"""
 	@staticmethod
 	def principal(X, theta, thetanew, lengthscale, thetanew_index=0, t=None):
+		"""
+        	:param X: Concatenated orthonormal bases
+        	:param sample: vector of scalar parameters, or matrix of vector parameters
+        	:param target: parameter point for prediction
+        	:param length_scale: length-scale of correlation, isotropic (scaler)
+                             or separable (vector), defaults to 1
+        	:param t: truncation size (optional)
+        	:returns: principal directions, principal variances, and noise variance
+        	"""
 		print(
 			dumps(
 				{
